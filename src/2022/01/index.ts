@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { parse } from 'csv-parse';
 
-export function getMaxCalories() {
+function getMaxCalories() {
   const csvFilePath = path.resolve(__dirname, '01.csv');
   let fileData: Object[] = [];
   let caloriesArray: number[] = [];
@@ -24,3 +24,4 @@ export function getMaxCalories() {
       console.log(caloriesArray[0] + caloriesArray[1] + caloriesArray[2]);
     });
 }
+getMaxCalories();
